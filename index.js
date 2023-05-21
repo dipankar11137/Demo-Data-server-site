@@ -10,8 +10,6 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const uri =
-  "mongodb+srv://demo_user:ohX6b7N93VYGGUBq@cluster0.wilfcwn.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
@@ -38,10 +36,10 @@ async function run() {
 
 run().catch(console.dir);
 
-app.get("/", (req, res) => {
-  res.send("Running Demo Data");
+app.get('/', (req, res) => {
+  res.send('Running development-agriculture-e-commerce-client');
 });
 
 app.listen(port, () => {
-  console.log("Demo Data is running ");
+  console.log('development-agriculture-e-commerce-client is running ');
 });
